@@ -3,9 +3,8 @@ from app.routers import inventory, bunker
 from app.database import engine
 from app import models # Импортируем наши новые таблицы
 
-# --- МАГИЯ: Создаем файл базы данных, если его нет ---
+
 models.Base.metadata.create_all(bind=engine)
-# -----------------------------------------------------
 
 app = FastAPI(
     title="Project: ZENIT API",
